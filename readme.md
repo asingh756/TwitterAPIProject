@@ -7,3 +7,6 @@ in reagrds to Sikh history.
 # plans
  * host on a server so that it runs on a daily schedule
  * pulls facts from a different source
+
+# Check out my progress
+ * check out my progress @TestBotSingh1

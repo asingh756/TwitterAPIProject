@@ -9,4 +9,6 @@ in reagrds to Sikh history.
  * pulls facts from a different source
 
 # Check out my progress
+ * 01/09/21 -- Bot was divided into files. Files are categorized by month. 
+ * 12/20/20 -- When Bot is active it will respond to any mentions.
  * check out my progress @TestBotSingh1

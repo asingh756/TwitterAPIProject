@@ -54,6 +54,25 @@ T.post('media/upload', { media_data: b64content }, function (err, data, response
     } 
 
 
+YOU WERE JUST HEREEEEE
+
+  var fs = require('fs');
+  var json = JSON.stringify(tweetMSG, null, 2);
+  fs.writeFile ("tweets.json", json);
+
+  var replyTo = tweetMSG.in_reply_to_screen_name;
+  var text = tweetMSG.text;
+  var from = tweetMSG.user.screen_name;
+
+  console.log(replyTo + from);
+  console.log(text);
+  console.log();
+
+  if(replyTo == 'TestBotSingh' || replyTo == 'TestBotSingh1') {
+    var newTweet = ( '@' + from + " Thank you for mentioning me! #youRock");
+    tweetStatus(newTweet);
+  }
+
 
 */
 

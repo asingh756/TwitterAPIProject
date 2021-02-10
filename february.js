@@ -2,17 +2,17 @@ var today = new Date();
 
 
 const getImage = () => {
-    if(today.getDate() == 5) {
-        console.log("grabbing Image for January 5th from January.js");
-        return '/Users/amritsingh/Desktop/Projects/TwitterAPIProject/images/guruamardass.jpeg';
+    if(today.getDate() == 20) {
+        console.log("grabbing Image for Saka Nankana Sahib from February.js");
+        return '/Users/amritsingh/Desktop/Projects/TwitterAPIProject/images/nankana_sahib_massacre.jpg';
         
     }
 }
 
 const getLink = () => {
-    if(today.getDate() == 5) {
-        console.log("grabbing Link for January 5th from January.js");
-        return 'https://www.allaboutsikhs.com/sikh-history/sikh-history-timeline/today-in-sikh-history-27th-november/';
+    if(today.getDate() == 20) {
+        console.log("grabbing Link for Saka Nankana Sahib from February.js");
+        return 'http://www.discoversikhism.com/sikh_genocide/1921_nankana_massacre.html';
     }
 }
 

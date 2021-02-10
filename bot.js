@@ -87,12 +87,12 @@ add following months here
 
 // reference todays date
 var today = new Date();
-
+var fs = require('fs');
 
 // If it is January
 if(today.getMonth() == 0 ) {
   //var b64content = fs.readFileSync('/Users/amritsingh/Desktop/Projects/TwitterAPIProject/images/guruamardass.jpeg', { encoding: 'base64' })
-  var fs = require('fs');
+  
   var b64content = fs.readFileSync(`${january.getImage()}`, { encoding: 'base64' })
   console.log("you are in bot.js --> January");
   

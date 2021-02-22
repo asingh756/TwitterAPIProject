@@ -6,9 +6,10 @@ in reagrds to Sikh history.
 
 # plans
  * host on a server so that it runs on a daily schedule
- * pulls facts from a different source
+ * Eventually write out event info (tweet) from my own knowledge/research to go along with the link
 
 # Check out my progress
+ * 02/10/21 -- Added events to the month of Febraury.
  * 01/09/21 -- Bot was divided into files. Files are categorized by month. 
  * 12/20/20 -- When Bot is active it will respond to any mentions.
  * check out my progress @TestBotSingh1

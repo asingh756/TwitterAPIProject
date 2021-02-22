@@ -1,6 +1,4 @@
 console.log('Starting the Twitter bot');
-
-
 // importing the twit package
 var Twit = require('twit'); 
 var keys = require('./keys');
@@ -80,7 +78,7 @@ function tweetEvent(tweet) {
 // POST ON A CERTAIN DATE
 const january = require('./january');
 const february = require('./february');
-//const march = require('./march');
+const march = require('./march');
 /*
 add following months here
 */
@@ -91,7 +89,6 @@ var fs = require('fs');
 
 // If it is January
 if(today.getMonth() == 0 ) {
-  //var b64content = fs.readFileSync('/Users/amritsingh/Desktop/Projects/TwitterAPIProject/images/guruamardass.jpeg', { encoding: 'base64' })
   
   var b64content = fs.readFileSync(`${january.getImage()}`, { encoding: 'base64' })
   console.log("you are in bot.js --> January");
@@ -136,7 +133,30 @@ if(today.getMonth() == 0 ) {
         })
       }
     })
-  }) 
+  })
+  // If it is March
+}else if (today.getMonth() == 2) { 
+
+  var b64content = fs.readFileSync(`${march.getImage()}`, { encoding: 'base64' })
+  console.log("you are in bot.js --> March");
+
+  T.post('media/upload', { media_data: b64content }, function (err, data, response) {
+    // assign alt text to the media, for use by screen readers and other text-based presentations and interpreters
+    var mediaIdStr = data.media_id_string
+    var altText = "XYZ TEST TEST"
+    var meta_params = { media_id: mediaIdStr, alt_text: { text: altText } }
+  
+    T.post('media/metadata/create', meta_params, function (err, data, response) {
+      if (!err) {
+        // reference the media and post a tweet (media will attach to the tweet)
+        var params = { status: `${march.getLink()}`, media_ids: [mediaIdStr] }
+        
+        T.post('statuses/update', params, function (err, data, response) {
+          console.log("success")
+        })
+      }
+    })
+  })
 
 } else {
   console.log("not today bro");

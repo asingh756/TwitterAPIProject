@@ -7,6 +7,7 @@ in reagrds to Sikh history.
 # plans
  * host on a server so that it runs on a daily schedule
  * Eventually write out event info (tweet) from my own knowledge/research to go along with the link
+ * currently working on creating Database using MySQL which will store all events. 
 
 # Check out my progress
  * 03/06/21 -- Added events to the month of March.
